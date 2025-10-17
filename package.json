@@ -1,0 +1,29 @@
+{
+  "name": "sjsu-mental-health-concierge",
+  "version": "1.0.0",
+  "description": "An ethical AI prototype for a university mental health concierge",
+  "private": true,
+  "workspaces": [
+    "web",
+    "api",
+    "types"
+  ],
+  "scripts": {
+    "dev": "concurrently \"pnpm dev:api\" \"pnpm dev:web\"",
+    "dev:web": "pnpm --filter web dev",
+    "dev:api": "pnpm --filter api dev",
+    "build": "pnpm --filter types build && pnpm --filter api build && pnpm --filter web build",
+    "test": "pnpm --filter types test && pnpm --filter api test && pnpm --filter web test",
+    "lint": "pnpm --filter types lint && pnpm --filter api lint && pnpm --filter web lint",
+    "clean": "pnpm --filter types clean && pnpm --filter api clean && pnpm --filter web clean"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.0"
+}

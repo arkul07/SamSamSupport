@@ -1,0 +1,20 @@
+{
+  "name": "@sjsu-mhc/types",
+  "version": "1.0.0",
+  "description": "Shared TypeScript types for SJSU Mental Health Concierge",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "test": "echo \"No tests specified\"",
+    "lint": "echo \"No linting specified\""
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "files": [
+    "dist"
+  ]
+}
